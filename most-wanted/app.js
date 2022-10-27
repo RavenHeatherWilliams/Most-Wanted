@@ -14,6 +14,7 @@
  * It operates as the entry point for our entire application and allows
  * our user to decide whether to search by name or by traits.
  * @param {Array} people        A collection of person objects.
+ * @return{Array}
  */
 function app(people) {
     // promptFor() is a custom function defined below that helps us prompt and validate input more easily
@@ -26,9 +27,12 @@ function app(people) {
     // Routes our application based on the user's input
     switch (searchType) {
         case "yes":
-            searchResults = searchByName(people);
+            searchResults = searchByName(people); // logic line 
             break;
         case "no":
+            // ALERT AND PROMPT DEMO
+// alert("Alerts display a message")
+// let response = prompt("Prompt takes in user input")
             //! TODO #4: Declare a searchByTraits (multiple traits) function //////////////////////////////////////////
                 //! TODO #4a: Provide option to search for single or multiple //////////////////////////////////////////
             searchResults = searchByTraits(people);
@@ -71,7 +75,7 @@ function mainMenu(person, people) {
             break;
         case "family":
             //! TODO #2: Declare a findPersonFamily function //////////////////////////////////////////
-            // HINT: Look for a people-collection stringifier utility function to help
+            // HINT: Look for a people-collection stringifier utility function to help SPOUCE, PARENTS, SIBLINGS
             let personFamily = findPersonFamily(person[0], people);
             alert(personFamily);
             break;
