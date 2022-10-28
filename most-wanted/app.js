@@ -14,8 +14,7 @@
  * It operates as the entry point for our entire application and allows
  * our user to decide whether to search by name or by traits.
  * @param {Array} people        A collection of person objects.
- * @return{Array}
- */
+ * */
 function app(people) {
     // promptFor() is a custom function defined below that helps us prompt and validate input more easily
     // Note that we are chaining the .toLowerCase() immediately after the promptFor returns its value
@@ -70,7 +69,7 @@ function mainMenu(person, people) {
         case "info":
             //! TODO #1: Utilize the displayPerson function //////////////////////////////////////////
             // HINT: Look for a person-object stringifier utility function to help
-            let personInfo = displayPerson(person[0]);
+            let personInfo = displayPerson(person[data]);
             alert(personInfo);
             break;
         case "family":
