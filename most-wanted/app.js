@@ -70,7 +70,8 @@ function mainMenu(person, people) {
             //! TODO #1: Utilize the displayPerson function //////////////////////////////////////////
             // HINT: Look for a person-object stringifier utility function to help
             // let personInfo = displayPerson(person[0]);
-            function displayPerson(person) {
+function displayPerson(person) {
+                
                 let personInfo = `First Name: ${person.firstName}\n`;
                 personInfo += `Last Name: ${person.lastName}\n`;
                 personInfo += `ID: ${person.ID}\n`;
@@ -82,20 +83,44 @@ function mainMenu(person, people) {
                 personInfo += `Occupation: ${person.occupation}\n`;
                 personInfo += `Parents: ${person.parents}\n`;
                 personInfo += `Current Spouse: ${person.currentSpouse}\n`;
+
+                // let displayPerson = array.data
                 //! TODO #1a: finish getting the rest of the information to display //////////////////////////////////////////
                 alert(personInfo);
             }
+
             console.log(displayPerson(data));   
             // alert(displayPerson);
-            
-            
             break;
+            
         case "family":
             //! TODO #2: Declare a findPersonFamily function //////////////////////////////////////////
             // HINT: Look for a people-collection stringifier utility function to help SPOUCE, PARENTS, SIBLINGS
-            let personFamily = findPersonFamily(person[0], people);
-            alert(personFamily);
+function searchByPersonFamily(people) {
+
+        let firstName = promptFor("What is the person's first name?", chars);
+        let lastName = promptFor("What is the person's last name?", chars);
+    // The foundPerson value will be of type Array. Recall that .filter() ALWAYS returns an array.
+        let personFamily = `Parents: ${person.parents}\n`;
+        personFamily += `Current Spouse: ${person.currentSpouse}\n`
+
+
+        let foundPerson = people.filter(function (person) {
+         if (person.firstName === firstName && person.lastName === lastName) {
+            return true;
+   
+            
+
+        }
+    });
+    return foundPerson;
+}
+            alert(PersonFamily);
+            console.log(displayPerson(Family));
             break;
+
+            
+
         case "descendants":
             //! TODO #3: Declare a findPersonDescendants function //////////////////////////////////////////
             // HINT: Review recursion lecture + demo for bonus user story
