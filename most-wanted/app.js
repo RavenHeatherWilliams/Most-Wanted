@@ -107,11 +107,20 @@ function displayPerson(person) {
         case "family":
             //! TODO #2: Declare a findPersonFamily function //////////////////////////////////////////
             // HINT: Look for a people-collection stringifier utility function to help SPOUCE, PARENTS, SIBLINGS
-function findPersonFamily(){
+function findPersonFamily(people){
             let personFamily = findPersonFamily(person[0], people);
+            let foundPerson = people.filter(funtion (person), {
+                if (personfamily = currentSpouse)
+                else (personFamily = parents) {
+                    return personFamily;
+                }
+            });
+            // let findPersonFamily = `Parents: ${person.parents}\n`;
+            // personFamily += `Current Spouse: ${person.currentSpouse}\n`;
+
             alert(personFamily);    
 
-            }
+            };
             console.log(findPersonFamily);   
             break;
 
