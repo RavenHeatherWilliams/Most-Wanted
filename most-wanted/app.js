@@ -34,6 +34,18 @@ function app(people) {
 // let response = prompt("Prompt takes in user input")
             //! TODO #4: Declare a searchByTraits (multiple traits) function //////////////////////////////////////////
                 //! TODO #4a: Provide option to search for single or multiple //////////////////////////////////////////
+
+
+function searchByEyeColor(array){
+    let userInput = prompt("Please enter an eye color:");
+    let foundPeople = array.filter(function(people){
+        if(people.eyeColor.includes("userInput"))
+            return true;
+    });
+    return foundPeople;
+}
+console.log(searchByEyeColor(peopleArray));          
+        
             searchResults = searchByTraits(people);
             break;
         default:
@@ -71,10 +83,9 @@ function mainMenu(person, people) {
             // HINT: Look for a person-object stringifier utility function to help
             // let personInfo = displayPerson(person[0]);
 function displayPerson(person) {
-                
                 let personInfo = `First Name: ${person.firstName}\n`;
                 personInfo += `Last Name: ${person.lastName}\n`;
-                personInfo += `ID: ${person.ID}\n`;
+                personInfo += `ID: ${person.id}\n`;
                 personInfo += `Gender: ${person.gender}\n`;
                 personInfo += `D O B: ${person.dob}\n`;
                 personInfo += `Height: ${person.height}\n`;
@@ -84,7 +95,7 @@ function displayPerson(person) {
                 personInfo += `Parents: ${person.parents}\n`;
                 personInfo += `Current Spouse: ${person.currentSpouse}\n`;
 
-                // let displayPerson = array.data
+              
                 //! TODO #1a: finish getting the rest of the information to display //////////////////////////////////////////
                 alert(personInfo);
             }
@@ -96,30 +107,14 @@ function displayPerson(person) {
         case "family":
             //! TODO #2: Declare a findPersonFamily function //////////////////////////////////////////
             // HINT: Look for a people-collection stringifier utility function to help SPOUCE, PARENTS, SIBLINGS
-function searchByPersonFamily(people) {
+function findPersonFamily(){
+            let personFamily = findPersonFamily(person[0], people);
+            alert(personFamily);    
 
-        let firstName = promptFor("What is the person's first name?", chars);
-        let lastName = promptFor("What is the person's last name?", chars);
-    // The foundPerson value will be of type Array. Recall that .filter() ALWAYS returns an array.
-        let personFamily = `Parents: ${person.parents}\n`;
-        personFamily += `Current Spouse: ${person.currentSpouse}\n`
-
-
-        let foundPerson = people.filter(function (person) {
-         if (person.firstName === firstName && person.lastName === lastName) {
-            return true;
-   
-            
-
-        }
-    });
-    return foundPerson;
-}
-            alert(PersonFamily);
-            console.log(displayPerson(Family));
+            }
+            console.log(findPersonFamily);   
             break;
 
-            
 
         case "descendants":
             //! TODO #3: Declare a findPersonDescendants function //////////////////////////////////////////
