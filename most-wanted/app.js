@@ -110,25 +110,32 @@ function displayPerson(person) {
 function findPersonFamily(people){
             let personFamily = findPersonFamily(person[0], people);
             let foundPerson = people.filter(funtion (person), {
-                if (personfamily = currentSpouse)
-                else (personFamily = parents) {
-                    return personFamily;
-                }
-            });
+                if (personfamily = currentSpouse, parent); 
+                    // return personfamily
+                // }else{ 
+                //     return (findPersonFamily);
+                // }
+            }
+
+               
             // let findPersonFamily = `Parents: ${person.parents}\n`;
             // personFamily += `Current Spouse: ${person.currentSpouse}\n`;
 
-            alert(personFamily);    
+                alert(personFamily);    
+            
 
-            };
-            console.log(findPersonFamily);   
+            }
+
+            console.log(findPersonFamily);
+            
             break;
 
 
         case "descendants":
             //! TODO #3: Declare a findPersonDescendants function //////////////////////////////////////////
             // HINT: Review recursion lecture + demo for bonus user story
-            let personDescendants = findPersonDescendants(person[0], people);
+function findPersonDescendants(people)
+            let personDescendants = personDescendants(person[0], people);
             alert(personDescendants);
             break;
         case "restart":
@@ -141,7 +148,10 @@ function findPersonFamily(people){
         default:
             // Prompt user again. Another instance of recursion
             return mainMenu(person, people);
+
+            alert(findPersonDescendants);
     }
+        console.log(personDescendants)
 }
 // End of mainMenu()
 
