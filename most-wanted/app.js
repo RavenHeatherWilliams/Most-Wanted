@@ -35,8 +35,10 @@ function app(people) {
             //! TODO #4: Declare a searchByTraits (multiple traits) function //////////////////////////////////////////
                 //! TODO #4a: Provide option to search for single or multiple //////////////////////////////////////////
 
+let prompt = searchByTraits("Please select a trait");
 
 function searchByEyeColor(array){
+   
     let userInput = prompt("Please enter an eye color:");
     let foundPeople = array.filter(function(people){
         if(people.eyeColor.includes("userInput"))
@@ -44,7 +46,51 @@ function searchByEyeColor(array){
     });
     return foundPeople;
 }
-console.log(searchByEyeColor(peopleArray));          
+console.log(searchByGender(peopleArray));  
+
+function searchByGender(array){
+   
+    let userInput = prompt("Please enter gender:");
+    let foundPeople = array.filter(function(people){
+        if(people.gender.includes("userInput"))
+            return true;
+    });
+    return foundPeople;
+}
+console.log(searchByGender);
+
+function searchByOccupation(array){
+   
+    let userInput = prompt("Please enter an occupation:");
+    let foundPeople = array.filter(function(people){
+        if(people.occupation.includes("userInput"))
+            return true;
+    });
+    return foundPeople;
+}
+console.log(searchByOccupation(peopleArray));
+
+function searchByHeight(array){
+   
+    let userInput = prompt("Please enter height:");
+    let foundPeople = array.filter(function(people){
+        if(people.height.includes("userInput"))
+            return true;
+    });
+    return foundPeople;
+}
+console.log(searchByHeight(peopleArray));
+
+function searchByWeight(array){
+   
+    let userInput = prompt("Please enter weight:");
+    let foundPeople = array.filter(function(people){
+        if(people.weight.includes("userInput"))
+            return true;
+    });
+    return foundPeople;
+}
+console.log(searchByWeight(peopleArray));
         
             searchResults = searchByTraits(people);
             break;
@@ -110,7 +156,7 @@ function displayPerson(person) {
 function findPersonFamily(people){
             let personFamily = findPersonFamily(person[0], people);
             let foundPerson = people.filter(funtion (person), {
-                if (personfamily = currentSpouse, parent); 
+                if (personfamily = currentSpouse, parent) 
                     // return personfamily
                 // }else{ 
                 //     return (findPersonFamily);
@@ -121,7 +167,7 @@ function findPersonFamily(people){
             // let findPersonFamily = `Parents: ${person.parents}\n`;
             // personFamily += `Current Spouse: ${person.currentSpouse}\n`;
 
-                alert(personFamily);    
+            return(personFamily)    
             
 
             }
