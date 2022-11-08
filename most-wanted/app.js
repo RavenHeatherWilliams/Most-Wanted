@@ -242,6 +242,8 @@ function findParents(person,people){
     return newArray
 }
 
+function findpar
+
 
 function searchByEyeColor(array){
    
